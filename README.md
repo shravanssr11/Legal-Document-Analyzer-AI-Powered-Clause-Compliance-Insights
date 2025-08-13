@@ -1,64 +1,60 @@
-# 📄 PDF Question Answering App using RAG, LangChain, Groq, and Streamlit
+📜 Legal Document Analyzer
+An AI-powered legal assistant that analyzes uploaded legal documents (contracts, NDAs, policies, compliance docs) and answers clause-specific queries with references — ensuring strict context-based responses without outside assumptions.
 
-This project is an interactive PDF-based Question Answering (QnA) application built using **Retrieval-Augmented Generation (RAG)** with the **LangChain** framework. It allows users to upload a PDF, ask questions about its content, and get accurate, context-aware responses using **Groq's Gemma-2 9B-IT** model and **Hugging Face embeddings**.
+Built using LangChain, Groq LLM, Hugging Face embeddings, and FAISS vector database for accurate document retrieval and analysis.
 
----
+🚀 Features
+📂 Upload PDFs – Supports multi-page legal documents.
 
-## 🚀 Features
+🔍 Clause-level search – Retrieves exact clauses and sections related to your query.
 
-- 📄 Upload any PDF document
-- 💬 Ask natural language questions based on PDF content
-- ⚡ Real-time response generation using **Groq (Gemma-2 9B-IT)**
-- 🔍 Contextual retrieval powered by **FAISS** and **Hugging Face embeddings**
-- 🧠 Prompt engineering with LangChain's chat prompt templates
-- 🖥️ Intuitive **Streamlit UI**
+📑 Precise references – Always cites section numbers and verbatim text.
 
----
+🛡️ Context-restricted answers – Never uses knowledge outside the uploaded document.
 
-## 🧰 Tech Stack
+💬 Conversational history – Maintains context across multiple queries.
 
-| Layer        | Tools Used |
-|--------------|------------|
-| LLM Inference | [Groq API](https://groq.com) with Gemma-2 9B-IT |
-| Embeddings   | [Hugging Face Transformers](https://huggingface.co) (`all-MiniLM-L6-v2`) |
-| Vector Store | [FAISS](https://github.com/facebookresearch/faiss) |
-| Framework    | [LangChain](https://www.langchain.com/) |
-| UI           | [Streamlit](https://streamlit.io/) |
-| PDF Parsing  | [PyMuPDF (fitz)](https://pymupdf.readthedocs.io/) |
+⚡ Fast retrieval – Powered by FAISS vector database.
 
----
+🛠️ Tech Stack
+Frontend & App Framework: Streamlit
 
-## 📂 Project Structure
+LLM: Groq using gemma2-9b-it model
 
-├── app.py # Streamlit frontend & core logic
-├── .env # API keys and environment variables
-├── requirements.txt # Python dependencies
-└── README.md # Project documentation
+Framework: LangChain
+
+Embeddings: Hugging Face – all-MiniLM-L6-v2
+
+Vector DB: FAISS
+
+PDF Processing: PyMuPDF
+
+📦 Installation
+1.**Clone the repository**
 
 
+git clone https://github.com/shravanssr11/Legal-Document-Analyzer-AI-Powered-Clause-Compliance-Insights
 
-## 🔑 Environment Variables
+cd legal-document-analyzer
 
-Create a `.env` file in the root directory and add your API keys:
-
-```env
-GROQ_API_KEY=your_groq_api_key
-HF_TOKEN=your_huggingface_token
-
-🛠️ Installation & Setup
-1. Clone the repository
-
-git clone https://github.com/your-username/pdf-qna-rag-app.git
-cd pdf-qna-rag-app
-
-2.Create a virtual environment
+2.**Create virtual environment**
 
 python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-3.Install dependencies
+source venv/bin/activate   # For Mac/Linux
+venv\Scripts\activate      # For Windows
+
+3.**Install dependencies**
 
 pip install -r requirements.txt
 
-4.Run the Streamlit app
+4.**Set up Enviornment Variables**
+
+Create a .env file in the root directory and add:
+
+GROQ_API_KEY=your_groq_api_key
+HF_TOKEN=your_huggingface_api_key
+
+▶️ Usage
+Run the Streamlit app:
 
 streamlit run app.py
