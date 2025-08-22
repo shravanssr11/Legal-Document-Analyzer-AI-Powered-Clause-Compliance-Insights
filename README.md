@@ -1,9 +1,9 @@
-📜 Legal Document Analyzer
+📜 # Legal Document Analyzer
 An AI-powered legal assistant that analyzes uploaded legal documents (contracts, NDAs, policies, compliance docs) and answers clause-specific queries with references — ensuring strict context-based responses without outside assumptions.
 
 Built using LangChain, Groq LLM, Hugging Face embeddings, and FAISS vector database for accurate document retrieval and analysis.
 
-🚀 Features
+##🚀 Features
 📂 Upload PDFs – Supports multi-page legal documents.
 
 🔍 Clause-level search – Retrieves exact clauses and sections related to your query.
@@ -16,7 +16,7 @@ Built using LangChain, Groq LLM, Hugging Face embeddings, and FAISS vector datab
 
 ⚡ Fast retrieval – Powered by FAISS vector database.
 
-🛠️ Tech Stack
+##🛠️ Tech Stack
 Frontend & App Framework: Streamlit
 
 LLM: Groq using gemma2-9b-it model
@@ -29,7 +29,7 @@ Vector DB: FAISS
 
 PDF Processing: PyMuPDF
 
-📦 Installation
+##📦 Installation
 1.**Clone the repository**
 
 
@@ -54,7 +54,7 @@ Create a .env file in the root directory and add:
 GROQ_API_KEY=your_groq_api_key
 HF_TOKEN=your_huggingface_api_key
 
-▶️ Usage
+##▶️ Usage
 Run the Streamlit app:
 
 streamlit run app.py
